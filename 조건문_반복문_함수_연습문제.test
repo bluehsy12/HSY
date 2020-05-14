@@ -1,0 +1,31 @@
+# 1. R의 apply() 함수를 이용하여 다음 문제를 해결하는 R 코드를 작성하시오.
+apply(iris[,-5],1,sum)
+apply(iris[,-5],2,sum)
+# 2. R의 apply() 함수를 이용하여 다음 문제를 해결하는 R 코드를 작성하시오.
+mtcars
+apply(mtcars,2,sum)
+apply(mtcars,2,max)
+apply(mtcars,2,sd)
+# 3. 다음과 같이 벡터를 입력하면 벡터의 최댓값과 최솟값을 반환(retrun)하는 R 함수
+# maxmin()을 만들고 테스트하시오(반환값이 list임)
+v1 <- c(7,1,2,8,9)
+r1 <- max(v1)
+r2 <- min(v1)
+r3 <- max(iris[,1])
+r4 <- min(iris[,1])
+r1
+r2
+r3
+r4
+# 4. 10명의 몸무게를 저장한 벡터가 다음과 같을 때 질문을 해결하기 위한 R코드를 작성하시오.
+weight <- c(69, 50, 55, 71, 89, 64, 59, 70, 71, 80)
+which.max(weight)
+which.min(weight)
+which(weight>=61&weight<=69)
+idx <- which(weight <=60)
+wight.2 <- weight[idx]
+wight.2
+# 5. 다음의 문제를 해결하기 위한 R 코드를 작성하시오(which() 함수 사용).
+which.max(iris$Petal.Length)
+s1 <- which(iris$Petal.Width >= 0.3 & iris$Petal.Width <= 0.4)
+s1
